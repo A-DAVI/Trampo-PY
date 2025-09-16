@@ -1,0 +1,55 @@
+    def iniciar_e_logar(self, login_region):
+        self.gui.add_log_message("Iniciando sistema Domínio...")
+        try:
+            subprocess.Popen([self.executavel_path, '/escrita'])
+            time.sleep(5)
+        except FileNotFoundError:
+            self.gui.add_log_message(f"ERRO: Executável não encontrado em '{self.executavel_path}'.")
+            return False
+        self.gui.add_log_message("Realizando login...")
+        dotenv.load_dotenv()
+        usuario = os.getenv("DOMINIO_USER")
+        senha = os.getenv("DOMINIO_PASS")
+        servidor = os.getenv("DOMINIO_SERVER")
+        if not all([usuario, senha, servidor]):
+            self.gui.add_log_message("ERRO FATAL: Variáveis (USER, PASS, SERVER) não encontradas no .env")
+            return False
+        try:
+            self.gui.add_log_message("Forçando foco no primeiro campo da janela...")
+            pyautogui.press('tab', presses=6)
+            time.sleep(5)
+            self.gui.add_log_message("Limpando campo de usuário...")
+            pyautogui.hotkey('ctrl', 'end')
+            time.sleep(0.5)
+            pyautogui.hotkey('ctrl', 'shift', 'home')
+            time.sleep(1)
+            pyautogui.press('backspace')
+            time.sleep(1)
+            self.gui.add_log_message("Preenchendo credenciais...")
+            pyautogui.write(usuario, interval=0.1)
+            pyautogui.press('tab')
+            time.sleep(0.5)
+            pyautogui.write(senha, interval=0.1)
+            pyautogui.press('tab')
+            time.sleep(0.5)
+            pyautogui.write(servidor, interval=0.1)
+            pyautogui.press('enter')
+            time.sleep(0.5)
+            pyautogui.press('enter')
+            self.gui.add_log_message("Login enviado. Aguardando carregamento...")
+            time.sleep(100)
+            self.gui.add_log_message("Navegando pelos menus...")
+            pyautogui.keyDown('alt')
+            time.sleep(1)
+            pyautogui.press('u')
+            time.sleep(1)
+            pyautogui.press('n')
+            time.sleep(1)
+            pyautogui.press('e')
+            time.sleep(1)
+            pyautogui.keyUp('alt')
+            self.gui.add_log_message("Navegação concluída.")
+            return True
+        except Exception as e:
+            self.gui.add_log_message(f"ERRO inesperado durante o login ou navegação: {e}")
+            return False
