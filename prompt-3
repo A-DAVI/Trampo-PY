@@ -1,4 +1,4 @@
-Criar uma tela inicial (pré-login) no sistema CAPT Empresarial chamada Seleção de Empresa, que aparece antes da tela principal.
+Criar uma tela inicial (pré-login) no sistema CAPT Empresarial chamada Seleção de Empresa, que aparece antes da tela principal. 
 Essa tela deve conter:
 
 Um dropdown listando até 3 empresas (empresa_1, empresa_2, empresa_3).
