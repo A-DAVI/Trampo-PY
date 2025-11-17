@@ -1,0 +1,85 @@
+🎯 1. Filtro em Cascata na Tela Principal (Resumo Financeiro)
+
+Adicionar um botão "Filtro" próximo ao botão de “Ver Relatório Completo”.
+
+Ao clicar, deve abrir uma janela modal (CTkToplevel) em formato de cascata, posicionada acima da tela principal.
+
+Essa janela deve conter os seguintes campos:
+
+Data Início
+
+Data Fim
+
+Tipo da Despesa
+
+Forma de Pagamento
+
+O botão “Aplicar” deve recalcular o resumo financeiro com base nos filtros aplicados.
+
+O botão “Cancelar” fecha o modal sem alterar os valores exibidos.
+
+Caso o usuário aplique o filtro, os cards do resumo (Total, Ticket médio, Quantidade) devem ser atualizados de acordo com o resultado filtrado.
+
+Os filtros devem ser independentes e cumulativos (por exemplo, é possível filtrar apenas por data, ou apenas por tipo, ou por ambos).
+
+🟪 2. Melhorias no Gerenciador de Despesas
+
+Substituir o campo de data única por dois campos: Data Início e Data Fim, lado a lado.
+
+Os filtros existentes (tipo, forma de pagamento, valor) permanecem.
+
+A filtragem por data deve considerar o intervalo entre as duas datas informadas.
+
+Se um dos campos estiver vazio, o filtro considera apenas o outro como limite.
+
+O layout deve ser ajustado para manter o alinhamento e estética atuais.
+
+📊 3. Filtro no Relatório Completo
+
+Na janela de relatório completo, adicionar um botão “Filtro” na parte superior.
+
+Esse botão deve abrir uma janela modal semelhante à da tela principal, reutilizando a mesma estrutura de filtro.
+
+O usuário pode escolher Data Início, Data Fim, Tipo da Despesa e Forma de Pagamento.
+
+Ao aplicar o filtro:
+
+Apenas os registros correspondentes devem ser exibidos no relatório.
+
+A função de exportar PDF deve gerar o relatório somente com os dados filtrados.
+
+O modal deve fechar automaticamente após aplicar os filtros.
+
+Caso o usuário clique em “Limpar filtros”, o relatório volta a exibir todos os registros.
+
+🧱 4. Padrões Visuais e UX
+
+As novas janelas devem seguir o tema dark e o estilo visual atual do projeto.
+
+Utilizar o mesmo padrão de fonte e cor dos botões existentes.
+
+Garantir que o modal tenha um tamanho fixo, centralizado, com corner_radius consistente com o restante da aplicação.
+
+O fluxo deve ser simples e coerente: clicar → abrir filtro → aplicar/fechar → atualizar interface.
+
+🧩 5. Integração e Estrutura
+
+O mesmo componente/modal de filtro deve ser reutilizável nas três áreas (Resumo, Gerenciador e Relatório).
+
+A lógica de filtragem deve ser implementada de forma modular (ex: função interna ou método compartilhado).
+
+Os cálculos do resumo e do relatório devem sempre respeitar o resultado filtrado.
+
+Caso nenhum filtro seja aplicado, o comportamento padrão (mostrar tudo) deve permanecer inalterado.
+
+📈 6. Objetivo Final
+
+Após a implementação:
+
+O sistema permitirá aplicar filtros por período, tipo e forma de pagamento em todas as principais telas.
+
+O resumo refletirá apenas os dados filtrados.
+
+O relatório completo poderá ser visualizado e exportado conforme os filtros.
+
+A interface continuará leve, coesa e intuitiva, mantendo o padrão profissional da 14D.
