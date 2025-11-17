@@ -1,0 +1,24 @@
+Criar uma tela inicial (pré-login) no sistema CAPT Empresarial chamada Seleção de Empresa, que aparece antes da tela principal.
+Essa tela deve conter:
+
+Um dropdown listando até 3 empresas (empresa_1, empresa_2, empresa_3).
+
+Um botão “Entrar” que carrega o JSON correspondente (app/data/empresa_X.json).
+
+Se o arquivo não existir, criar um novo automaticamente.
+
+Mostrar logo e nome do sistema (CAPT Empresarial - Grupo14D).
+
+Após a escolha, inicializar a interface principal ControleGastosApp() já com o caminho do arquivo da empresa.
+
+A implementação deve:
+
+Ser modular (tela separada em ui/empresa_selector.py).
+
+Integrar-se ao módulo de segurança e logs já existente.
+
+Ser compatível com o fluxo atual (sem quebrar a UI principal).
+
+Permitir futura expansão para BD, mantendo a camada de acesso a dados isolada.
+
+Utilizar as mesmas cores e fonte do tema atual.
