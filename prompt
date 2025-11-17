@@ -1,0 +1,84 @@
+🧾 PROMPT — “Rebranding e Contexto Corporativo - Grupo 14D”
+
+
+NOME definitivo trocar aonde aparece Sistema CAPT Emrpresarial para Captação de Despesas-14D 
+🔧 Objetivo:
+Reestilizar a aplicação “Sistema CAPT Empresarial” para refletir a identidade visual e institucional do GRUPO 14D, mantendo a estrutura funcional atual.
+
+O foco é visual + contexto corporativo (não alterar lógicas, apenas identidade e layout).
+
+🎨 Diretrizes Visuais
+
+Tema predominante:
+
+Fundo escuro (#0B0B0B)
+
+Destaques em azul corporativo (#007BFF) e cinza grafite (#1A1A1A).
+
+Textos principais em branco (#FFFFFF), subtítulos em cinza claro (#CCCCCC).
+
+Logo:
+
+Adicionar a logo institucional usada no README:
+logo_empresa.png (local na raiz do projeto).
+
+Inserir no topo central da tela principal (com leve sombra ou borda sutil).
+
+Tipografia:
+
+Usar fonte moderna e sem serifa (Ex: Segoe UI, Roboto ou padrão CustomTkinter).
+
+Títulos em negrito, tamanho 22–26pt.
+
+Labels e botões entre 13–15pt.
+
+Componentes de Interface:
+
+Botões arredondados (border_radius=8~12).
+
+Campos de entrada com sombra leve e bordas suaves.
+
+Agrupar seções com CTkFrame de fundo levemente mais escuro que o principal.
+
+🏷️ Identidade Corporativa e Contexto
+
+Título principal da janela:
+"Sistema CAPT Empresarial — Grupo 14D"
+
+Rodapé fixo (no frame principal ou status bar inferior):
+
+Desenvolvido pelo Departamento de Tecnologia — GRUPO 14D • 2025
+
+
+Fonte pequena (11pt), cor cinza clara.
+
+Adicionar label discreta abaixo da logo:
+"Controle de Gastos e Relatórios Empresariais"
+
+🧠 Contexto Interno no Código
+
+Onde houver textos genéricos (“Controle de Gastos”, “Sistema de Despesas”), alterar para:
+
+"Sistema CAPT Empresarial — GRUPO 14D"
+
+"Registro de Despesas Operacionais"
+
+"Relatórios e Indicadores Financeiros"
+
+No relatório PDF, incluir:
+
+Texto “Emitido automaticamente pelo Sistema CAPT Empresarial — Grupo 14D”.
+
+💡 Extras opcionais (se o modelo suportar)
+
+Adicionar ícone da aplicação (iconbitmap / .ico da logo 14D).
+
+Criar splash screen simples (logo central + “Carregando Sistema CAPT Empresarial...”).
+
+Aplicar animação de fade-in leve ao abrir (usando after() no Tkinter).
+
+⚙️ Instrução final ao modelo
+
+“Usando as diretrizes acima, atualize o layout do sistema sem alterar a lógica existente.
+Reescreva apenas a parte visual do código e insira os elementos de branding e rodapé institucional.
+Preserve os nomes das classes e métodos originais.”
