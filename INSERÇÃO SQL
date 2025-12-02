@@ -1,0 +1,41 @@
+-- MERCEARIA BELLA VISTA (50 registros)
+WITH base AS (
+    SELECT 'MERCEARIA BELLA VISTA' AS empresa_id,
+           DATE('2025-01-01', printf('+%d day', i)) AS data,
+           ('Categoria ' || (i % 5 + 1)) AS tipo,
+           ('Forma ' || (i % 3 + 1)) AS forma_pagamento,
+           (100 + (i * 3)) * 1.0 AS valor,
+           ('Fornecedor ' || (i % 7 + 1)) AS fornecedor,
+           DATETIME('now') AS timestamp
+    FROM generate_series(1, 50) AS i
+)
+INSERT INTO despesas (empresa_id, data, tipo, forma_pagamento, valor, fornecedor, timestamp)
+SELECT * FROM base;
+
+-- SUPERPAO (50 registros)
+WITH base AS (
+    SELECT 'SUPERPAO' AS empresa_id,
+           DATE('2025-02-01', printf('+%d day', i)) AS data,
+           ('Categoria ' || (i % 5 + 1)) AS tipo,
+           ('Forma ' || (i % 3 + 1)) AS forma_pagamento,
+           (150 + (i * 2)) * 1.0 AS valor,
+           ('Fornecedor ' || (i % 6 + 1)) AS fornecedor,
+           DATETIME('now') AS timestamp
+    FROM generate_series(1, 50) AS i
+)
+INSERT INTO despesas (empresa_id, data, tipo, forma_pagamento, valor, fornecedor, timestamp)
+SELECT * FROM base;
+
+-- SP FOODS (50 registros)
+WITH base AS (
+    SELECT 'SP FOODS' AS empresa_id,
+           DATE('2025-03-01', printf('+%d day', i)) AS data,
+           ('Categoria ' || (i % 5 + 1)) AS tipo,
+           ('Forma ' || (i % 3 + 1)) AS forma_pagamento,
+           (200 + (i * 4)) * 1.0 AS valor,
+           ('Fornecedor ' || (i % 5 + 1)) AS fornecedor,
+           DATETIME('now') AS timestamp
+    FROM generate_series(1, 50) AS i
+)
+INSERT INTO despesas (empresa_id, data, tipo, forma_pagamento, valor, fornecedor, timestamp)
+SELECT * FROM base;
